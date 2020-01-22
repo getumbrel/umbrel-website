@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Umbrel | Prototype</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    </head>
+    <body class="body" style="margin:0px;padding:0px;overflow:hidden">
+      <h3 id="warning" style="display: none;">Please open this page on a desktop or laptop.</h3>
+      <iframe id="proto" frameborder="0" style="border:none;overflow:hidden;height:100vh;width:100vw" width="100%" height="100%" src="" allowfullscreen></iframe>
+    </body>
+
+    <script>
+      function loadPrototype() {
+        var iframe = document.getElementById("proto");
+        iframe.src = "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FzFRMBxYV0lzqijYZ3Suunu%2FUmbrel-1.0%3Fnode-id%3D219%253A2046%26viewport%3D5362%252C-4531%252C0.6629183292388916%26scaling%3Dcontain";
+      }
+      function loadDeferredIframe() {
+        if (window.innerWidth < 1024) {
+          var isConfirmed = confirm("This prototype is best viewed on a large screen device such as a tablet or a laptop. Do you still wish to proceed?");
+          if (isConfirmed) {
+            loadPrototype();
+          } else {
+            var warning = document.getElementById("warning");
+            warning.style.display = 'block';
+          }
+        } else {
+          loadPrototype();
+        }
+      };
+      window.onload = loadDeferredIframe;
+  </script>
+</html>
