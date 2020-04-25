@@ -1,11 +1,11 @@
-import {mat4} from 'gl-matrix'
+import { mat4 } from 'gl-matrix'
 // import stats from '~js/helpers/stats'
 // import gui from '~js/helpers/gui'
 import Texture from '~js/helpers/Texture'
-import {regl, play} from '~js/renderer'
+import { regl, play } from '~js/renderer'
 import camera from '~js/camera'
-import cube, {Types as CubeTypes, Faces as CubeFaces, Masks as CubeMasks} from '~js/components/cube'
-import content, {Types as ContentTypes} from '~js/components/content'
+import cube, { Types as CubeTypes, Faces as CubeFaces, Masks as CubeMasks } from '~js/components/cube'
+import content, { Types as ContentTypes } from '~js/components/content'
 import reflection from '~js/components/reflection'
 // import $ from "jquery";
 
@@ -54,7 +54,7 @@ const textures = [
     maskId: CubeMasks.M1,
   },
   {
-    texture: Texture(regl, 'text-3.png'),
+    texture: Texture(regl, 'text-2.png'),
     typeId: ContentTypes.BLUE,
     maskId: CubeMasks.M2,
   },
@@ -64,31 +64,21 @@ const textures = [
     maskId: CubeMasks.M3,
   },
   {
-    texture: Texture(regl, 'logo.png'),
+    texture: Texture(regl, 'text-2.png'),
     typeId: ContentTypes.RED,
     maskId: CubeMasks.M4,
   },
   {
-    texture: Texture(regl, 'text-2.png'),
-    typeId: ContentTypes.RAINBOW,
-    maskId: CubeMasks.M5,
-  },
-  {
-    texture: Texture(regl, 'logo.png'),
+    texture: Texture(regl, 'text-1.png'),
     typeId: ContentTypes.RED,
-    maskId: CubeMasks.M6,
-  },
-  {
-    texture: Texture(regl, 'text-4.png'),
-    typeId: ContentTypes.RAINBOW,
-    maskId: CubeMasks.M7,
-  },
+    maskId: CubeMasks.M5,
+  }
 ]
 
-const animate = ({viewportWidth, viewportHeight, tick}) => {
+const animate = ({ viewportWidth, viewportHeight, tick }) => {
   // stats.begin()
 
-  const {rotation, rotateX, rotateY, rotateZ, velocity, cameraX, cameraY, cameraZ} = CONFIG
+  const { rotation, rotateX, rotateY, rotateZ, velocity, cameraX, cameraY, cameraZ } = CONFIG
 
   /**
    * Resize Fbos

@@ -1,7 +1,7 @@
-import {mat4} from 'gl-matrix'
-import {regl} from '~js/renderer'
+import { mat4 } from 'gl-matrix'
+import { regl } from '~js/renderer'
 import gui from '~js/helpers/gui'
-import {positions, centers, uv, elements, colors} from './config'
+import { positions, centers, uv, elements, colors } from './config'
 import frag from './shader.frag'
 import vert from './shader.vert'
 
@@ -45,8 +45,8 @@ export default regl({
   frag,
   vert,
   context: {
-    world: (context, {matrix}) => {
-      const {translateX, translateY, translateZ, rotation, rotateX, rotateY, rotateZ, scale} = CONFIG
+    world: (context, { matrix }) => {
+      const { translateX, translateY, translateZ, rotation, rotateX, rotateY, rotateZ, scale } = CONFIG
 
       const world = mat4.create()
 
@@ -60,35 +60,35 @@ export default regl({
 
       return world
     },
-    face: (context, {cullFace}) => {
+    face: (context, { cullFace }) => {
       return cullFace === Faces.FRONT ? -1 : 1
     },
-    texture: (context, {texture}) => {
+    texture: (context, { texture }) => {
       return texture || emptyTexture
     },
-    reflection: (context, {reflection}) => {
+    reflection: (context, { reflection }) => {
       return reflection || emptyCube
     },
-    textureMatrix: (context, {textureMatrix}) => {
+    textureMatrix: (context, { textureMatrix }) => {
       return textureMatrix
     },
     borderWidth: () => {
-      const {borderWidth} = CONFIG
+      const { borderWidth } = CONFIG
 
       return borderWidth
     },
     displacementLength: () => {
-      const {displacementLength} = CONFIG
+      const { displacementLength } = CONFIG
 
       return displacementLength
     },
     reflectionOpacity: () => {
-      const {reflectionOpacity} = CONFIG
+      const { reflectionOpacity } = CONFIG
 
       return reflectionOpacity
     },
     scene: () => {
-      const {scene} = CONFIG
+      const { scene } = CONFIG
 
       return parseFloat(scene)
     }
@@ -155,7 +155,5 @@ export const Masks = {
   M2: 2,
   M3: 3,
   M4: 4,
-  M5: 5,
-  M6: 6,
-  M7: 7,
+  M5: 5
 }
