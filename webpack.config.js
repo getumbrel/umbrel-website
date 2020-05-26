@@ -31,6 +31,12 @@ module.exports = {
         to: '',
         flatten: true,
       },
+    ]),
+    new CopyPlugin([
+      {
+        from: './src/html/prototype.html',
+        to: '',
+      },
     ])
   ],
   module: {
