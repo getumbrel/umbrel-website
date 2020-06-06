@@ -251,6 +251,7 @@
      font-weight: 600;
      text-decoration: line-through;
      text-transform: lowercase;
+     margin-bottom: 10px;
    }
    
    .cards-horizontal-container {
