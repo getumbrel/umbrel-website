@@ -1,75 +1,570 @@
 <!DOCTYPE html>
-<html>
-
+<!--  This site was created in Webflow. http://www.webflow.com  -->
+<!--  Last Published: Sat Oct 17 2020 16:42:15 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="5f845b2dcb9d170e2f7081d5" data-wf-site="5f845b2dcb9d1727057081d4" lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Umbrel - Become Bitcoin</title>
-  <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport" />
-  <meta name="title" content="Umbrel ☂️">
-  <meta name="description"
-    content="Run your own Bitcoin and Lightning Network full-node, self-host open-source applications, cut the middlemen and use Bitcoin to its full potential.">
-  <meta name="keywords" content="umbrel, bitcoin node, lightning node, full node" />
-
-  <!-- Open Graph / Facebook -->
+  <meta charset="utf-8">
+  <title>Umbrel — your personal Bitcoin node.</title>
+  <meta content="Run your own Bitcoin and Lightning Network node on a Raspberry Pi or any Linux OS. Cut out the middlemen and use Bitcoin to its full potential. For free." name="description">
+  <meta content="☂️ Umbrel — your personal Bitcoin node." property="og:title">
+  <meta content="Run your own Bitcoin and Lightning Network node on a Raspberry Pi or any Linux OS. Cut out the middlemen and use Bitcoin to its full potential. For free." property="og:description">
+  <meta content="https://static.getumbrel.com/open-graph-share.png" property="og:image">
+  <meta content="☂️ Umbrel — your personal Bitcoin node." property="twitter:title">
+  <meta content="Run your own Bitcoin and Lightning Network node on a Raspberry Pi or any Linux OS. Cut out the middlemen and use Bitcoin to its full potential. For free." property="twitter:description">
+  <meta content="https://static.getumbrel.com/open-graph-share.png" property="twitter:image">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://getumbrel.com/">
-  <meta property="og:title" content="Umbrel ☂️">
-  <meta property="og:description"
-    content="Run your own Bitcoin and Lightning Network full-node, self-host open-source applications, cut the middlemen and use Bitcoin to its full potential.">
-  <meta property="og:image" content="https://getumbrel.com/assets/img/share.png">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://getumbrel.com/">
-  <meta property="twitter:title" content="Umbrel ☂️">
-  <meta property="twitter:description"
-    content="Run your own Bitcoin and Lightning Network full-node, self-host open-source applications, cut the middlemen and use Bitcoin to its full potential.">
-  <meta property="twitter:image" content="https://getumbrel.com/assets/img/share.png">
-
-  <link rel="shortcut icon" href="favicon.png">
-  <link rel="stylesheet" type="text/css" href="assets/css/base.css" />
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/getumbrel-v3.webflow.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: ["Roboto:300,regular,500,700,900"]
+        }
+      });
+    </script>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">
+      ! function(o, c) {
+        var n = c.documentElement,
+          t = " w-mod-";
+        n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+      }(window, document);
+    </script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+  <script type="text/javascript">
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-180738221-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+  <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Segoe UI", "Arial", "Noto Sans", sans-serif !important;
+      }
+      .w-webflow-badge {
+        display: none !important;
+      }
+      .w-slider-dot {
+        width: 0.5em;
+        height: 0.5em;
+      }
+      .w-slider-nav-invert>div {
+        background-color: #cacbd2 !important;
+      }
+      .w-slider-nav-invert>div.w-active {
+        background-color: #535558 !important;
+      }
+      blockquote.twitter-tweet {
+        display: inline-block;
+        font-family: system-ui, "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 16px;
+        border-color: #efefef;
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 1px;
+        box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);
+        margin: 10px 5px;
+        padding: 20px;
+        max-width: 468px;
+      }
+      blockquote.twitter-tweet p {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 20px;
+      }
+      blockquote.twitter-tweet a {
+        color: inherit;
+        font-weight: normal;
+        text-decoration: none;
+        outline: 0 none;
+      }
+      blockquote.twitter-tweet a:hover,
+      blockquote.twitter-tweet a:focus {
+        text-decoration: underline;
+      }
+      .tweets {
+        display: inline-flex !important;
+        animation: marquee 30s linear infinite;
+        transform-style: preserve-3d;
+        will-change: transform;
+      }
+      /*
+.tweets:hover {
+	animation-play-state: paused !important;
+}
+*/
+      .tweets.to-left {
+        animation: to-left 180s linear infinite;
+        animation-play-state: paused;
+      }
+      .tweets.to-left.active {
+        animation-play-state: running;
+      }
+      .tweets.to-right {
+        animation: to-right 180s linear infinite;
+        animation-play-state: paused;
+      }
+      .tweets.to-right.active {
+        animation-play-state: running;
+      }
+      @keyframes to-left {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0);
+        }
+        50% {
+          transform: translate3d(calc(-100% + 100vw), 0, 0);
+        }
+      }
+      @keyframes to-right {
+        0%,
+        100% {
+          transform: translate3d(calc(-100% + 100vw), 0, 0);
+        }
+        50% {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+    </style>
 </head>
-
 <body class="body">
-  <section id="hero" class="hero-2">
-    <div class="div-block">
-      <img src="assets/img/umbrel.svg" alt="" class="image" />
-      <div class="text-block">&nbsp;Buy bitcoin&nbsp;</div>
-      <h1 class="heading">Become Bitcoin</h1>
-      <p class="paragraph">Run your own Bitcoin and Lightning Network full-node, self-host open-source applications, cut
-        the middlemen and use Bitcoin to its full potential.</p>
-      <div class="w-form">
-        <form id="email-form" class="form"
-          action="https://umbrel.us4.list-manage.com/subscribe/post?u=988de5c1824a0b5075b2cc279&amp;id=5dd6f49a69"
-          method="post" name="mc-embedded-subscribe-form" target="_blank">
-          <input type="email" class="text-field w-input" maxlength="256" name="EMAIL" placeholder="Email address"
-            id="email" required="" />
-          <input type="submit" value="Get early access" data-wait="Signing you up..." class="submit-button w-button" />
-        </form>
+  <div data-w-id="8b4d1f7c-f4d3-78f5-6415-3eca696d56e1" style="filter:blur(0px)" class="content-wrapper">
+    <div data-w-id="6cf5c2d0-adae-62ee-1e23-cd002883485b" class="hero">
+      <div class="header"><a data-w-id="eff6c58b-2ecf-95f5-c0fe-7786d78744a1" style="opacity:0" href="#" class="w-inline-block"><img src="images/umbrel-logo.svg" loading="lazy" alt="" class="logo"></a>
+        <div class="social"><a data-w-id="9739ac64-1a41-bbb0-7fd0-7053fb2df580" style="opacity:0" href="https://t.me/getumbrel" target="_blank" class="social-link w-inline-block"><img src="images/telegram.svg" alt=""></a><a data-w-id="9739ac64-1a41-bbb0-7fd0-7053fb2df582" style="opacity:0" href="https://twitter.com/getumbrel" target="_blank" class="social-link w-inline-block"><img src="images/twitter.svg" alt=""></a><a data-w-id="a2401be2-8b90-8402-59db-3aac5ead3ca1" style="opacity:0" href="https://www.reddit.com/r/getumbrel" target="_blank" class="social-link w-inline-block"><img src="images/reddit.svg" alt=""></a><a data-w-id="9739ac64-1a41-bbb0-7fd0-7053fb2df584" style="opacity:0" href="https://github.com/getumbrel/umbrel" target="_blank" class="social-link w-inline-block"><img src="images/github.svg" alt=""></a>
+          <a data-w-id="f013c030-47d0-367f-c3cb-560aaf636d79" style="opacity:0" href="#start" class="gradient-button link-block w-inline-block">
+            <div class="button-text">Get Started</div><img src="images/arrow.svg" loading="lazy" alt="" class="button-arrow"></a>
+        </div>
       </div>
-      <div class="social">
-        <a href="https://t.me/getumbrel" class="social-link w-inline-block" target="_blank">
-          <img src="assets/img/telegram.svg" alt="" />
-        </a>
-        <a href="https://twitter.com/getumbrel" class="social-link w-inline-block" target="_blank">
-          <img src="assets/img/twitter.svg" alt="" />
-        </a>
-        <a href="https://github.com/getumbrel/umbrel" class="social-link w-inline-block" target="_blank">
-          <img src="assets/img/github.svg" alt="" />
-        </a>
+      <div class="container-3 container w-container">
+        <div class="div-block-7">
+          <div data-w-id="46340069-5ca5-1686-d6e5-c3bf24acc65b" style="width:0PX" class="strike"></div>
+          <div data-w-id="40d05106-4083-9ef8-7945-6e2c17d0853a" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="strike-heading">buy bitcoin</div>
+        </div>
+        <h1 data-w-id="a264c121-f411-8d08-29d8-36b2a20024cb" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="big-heading"> become bitcoin </h1>
+        <p data-w-id="c266114f-66ce-3f12-4ce4-9c9b04c42137" style="opacity:0;-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="paragraph">Run your personal Bitcoin and Lightning Network node, cut out the middlemen, reclaim your privacy and use Bitcoin to its full potential. For free.</p>
+        <a data-w-id="48c01c89-b2a8-b284-8129-21e71b31c1d2" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" href="#start" class="gradient-button link-block button-hero w-inline-block">
+          <div class="button-text">Get Started</div><img src="images/arrow.svg" loading="lazy" alt="" class="button-arrow"></a><img class="mockup" src="images/hero.png" width="1440" alt="" style="-webkit-transform:translate3d(0, 20PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" sizes="(max-width: 479px) 96vw, (max-width: 767px) 93vw, (max-width: 991px) 728px, 940px" data-w-id="c7ba4c8e-bb61-2614-40b4-7dbb395dda56" loading="lazy" srcset="images/hero-p-500.png 500w, images/hero-p-800.png 800w, images/hero-p-1080.png 1080w, images/hero-p-1600.png 1600w, images/hero-p-2000.png 2000w, images/hero-p-2600.png 2600w, images/hero.png 2880w"></div>
+    </div>
+    <div class="section show-overflow-x">
+      <div class="container w-container">
+        <div class="div-block-2">
+          <div class="columns-2 w-row">
+            <div class="w-col w-col-7">
+              <h1 data-w-id="c812770f-c452-b923-7517-872d2ff48e2d" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="big-heading text-left">running a node is for everyone.</h1>
+            </div>
+            <div class="w-col w-col-5"></div>
+          </div>
+          <div class="columns-3 w-row">
+            <div class="w-col w-col-6 w-col-small-6">
+              <p data-w-id="e251d09e-fd4b-40ae-2822-a8c103440650" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="paragraph text-left">The Bitcoin network is made up of thousands of nodes that verify every single transaction in the blockchain.
+                <br><br>Some of them mine Bitcoin too, but unlike a mining node, <strong>running a non-mining node doesn’t require expensive hardware.</strong></p>
+            </div>
+            <div class="w-col w-col-6 w-col-small-6"></div>
+          </div>
+        </div><img src="images/why-umbrel.svg" loading="lazy" alt="" class="image"></div>
+    </div>
+    <div class="section dark">
+      <div class="container w-container">
+        <div class="w-row">
+          <div class="w-col w-col-10">
+            <h1 data-w-id="b62222df-adc8-fce0-9fde-0d8d37712cbb" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="big-heading text-left">connect all of your favorite wallets.</h1>
+            <p data-w-id="2246ffc2-ebc3-c848-aca4-1dc290607e45" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="paragraph text-left mb-60">Achieve <strong>unparalleled privacy by connecting your wallet directly to your Umbrel</strong>. This ensures that your wallet company can’t spy on your transactions, or even worse — lie to you.</p>
+          </div>
+          <div class="w-col w-col-2"></div>
+        </div>
+      </div>
+      <div class="wallets-container">
+        <div data-w-id="f1d555b2-abe9-ec89-44c2-d6e758ee2fca" class="wallet"><img src="images/electrum.png" loading="lazy" alt="" class="wallet-icon">
+          <h3 class="wallet-name">Electrum</h3>
+        </div>
+        <div data-w-id="f1d555b2-abe9-ec89-44c2-d6e758ee2fca" class="wallet"><img src="images/zap.png" loading="lazy" alt="" class="wallet-icon">
+          <h3 class="wallet-name">Zap</h3>
+        </div>
+        <div data-w-id="f1d555b2-abe9-ec89-44c2-d6e758ee2fca" class="wallet"><img src="images/coldcard.png" loading="lazy" alt="" class="wallet-icon">
+          <h3 class="wallet-name">Coldcard</h3>
+        </div>
+        <div data-w-id="f1d555b2-abe9-ec89-44c2-d6e758ee2fca" class="wallet"><img src="images/specter.png" loading="lazy" alt="" class="wallet-icon">
+          <h3 class="wallet-name">Specter</h3>
+        </div>
+        <div data-w-id="f1d555b2-abe9-ec89-44c2-d6e758ee2fca" class="wallet"><img src="images/wasabi.png" loading="lazy" alt="" class="wallet-icon">
+          <h3 class="wallet-name">Wasabi</h3>
+        </div>
+        <div data-w-id="f1d555b2-abe9-ec89-44c2-d6e758ee2fca" class="wallet"><img src="images/trezor.png" loading="lazy" alt="" class="wallet-icon">
+          <h3 class="wallet-name">Trezor</h3>
+        </div>
+        <div data-w-id="f1d555b2-abe9-ec89-44c2-d6e758ee2fca" class="wallet"><img src="images/bluewallet.png" loading="lazy" alt="" class="wallet-icon">
+          <h3 class="wallet-name">BlueWallet</h3>
+        </div>
+        <div data-w-id="f1d555b2-abe9-ec89-44c2-d6e758ee2fca" class="wallet"><img src="images/ledger.png" loading="lazy" alt="" class="wallet-icon">
+          <h3 class="wallet-name">Ledger</h3>
+        </div>
+        <div data-w-id="f1d555b2-abe9-ec89-44c2-d6e758ee2fca" class="wallet"><img src="images/fullynoded.png" loading="lazy" alt="" class="wallet-icon">
+          <h3 class="wallet-name">Fully Noded</h3>
+        </div>
+        <div data-w-id="f1d555b2-abe9-ec89-44c2-d6e758ee2fca" class="wallet"><img src="images/zeus.png" loading="lazy" alt="" class="wallet-icon">
+          <h3 class="wallet-name">Zeus</h3>
+        </div>
+        <div data-w-id="f1d555b2-abe9-ec89-44c2-d6e758ee2fca" class="wallet"><img src="images/phoenix.png" loading="lazy" alt="" class="wallet-icon">
+          <h3 class="wallet-name">Phoenix</h3>
+        </div>
+        <div data-w-id="f1d555b2-abe9-ec89-44c2-d6e758ee2fca" class="wallet"><img src="images/sparrow.png" loading="lazy" alt="" class="wallet-icon">
+          <h3 class="wallet-name">Sparrow</h3>
+        </div>
+        <div data-w-id="f1d555b2-abe9-ec89-44c2-d6e758ee2fca" class="wallet"><img src="images/green.png" loading="lazy" alt="" class="wallet-icon">
+          <h3 class="wallet-name">Blockstream Green</h3>
+        </div>
+        <div data-w-id="f1d555b2-abe9-ec89-44c2-d6e758ee2fca" class="wallet"><img src="images/bitboxapp.png" loading="lazy" alt="" class="wallet-icon">
+          <h3 class="wallet-name">BitBoxApp</h3>
+        </div>
+      </div>
+      <div class="container w-container">
+        <p data-w-id="253df401-87b3-d78e-bc0f-4181be48e7cd" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="paragraph text-small">Or connect any other wallet that supports Bitcoin Core P2P, Bitcoin Core RPC, the Electrum protocol, or lndconnect.</p>
       </div>
     </div>
-    <div class="cards-horizontal-container">
-      <div class="cards-horizontal-img"></div>
-    </div>
-    <div class="cards-vertical-container">
-      <div class="cards-vertical">
-        <div class="cards-vertical-img card-vertical-img-left"></div>
-        <div class="cards-vertical-img cards-vertical-img-right"></div>
+    <div id="start" class="section">
+      <div class="container w-container">
+        <div class="w-row">
+          <div class="w-col w-col-10">
+            <h1 data-w-id="6b06704b-67ef-70b7-16e0-ca713acaf0c6" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="big-heading text-left">get up and running in 5 minutes.</h1>
+            <p data-w-id="6b06704b-67ef-70b7-16e0-ca713acaf0ca" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="paragraph text-left mb-60">Install Umbrel on the hardware of your choice. After installation <strong>open http://umbrel.local to access your Umbrel’s dashboard</strong> on any device connected to the same network.</p>
+          </div>
+          <div class="w-col w-col-2"></div>
+        </div>
+        <div class="columns-4 w-row">
+          <div class="w-col w-col-7 w-col-medium-6">
+            <div data-w-id="d28ac84e-39ea-a88f-6fc2-c825b4bbef1c" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="card relative">
+              <div class="card-container">
+                <div class="text-block-2">Recommended</div>
+                <div class="card-header">
+                  <h2 class="heading card-heading">Install Umbrel on a Raspberry Pi 4</h2>
+                </div>
+                <p class="paragraph text-left">The fastest, easiest and most reliable way to run Umbrel in just a few clicks.</p>
+                <div class="columns columns-centered w-row">
+                  <div class="column-5 w-col w-col-6 w-col-stack">
+                    <div class="label">Recommended<br>Hardware</div>
+                    <div data-w-id="982f5ceb-f96d-3bee-01e9-a99202cf0a58" class="list-item"><img src="images/checkmark.svg" loading="lazy" alt=""><a href="https://www.amazon.com/gp/product/B08C4SK5C3/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B08C4SK5C3&amp;linkCode=as2&amp;tag=umbrel08-20&amp;linkId=d3f17fd4813568c4863d239839311d67" target="_blank" class="link">Raspberry Pi 4</a></div>
+                    <div data-w-id="982f5ceb-f96d-3bee-01e9-a99202cf0a58" class="list-item"><img src="images/checkmark.svg" loading="lazy" alt=""><a href="https://www.amazon.com/gp/product/B077SF8KMG/ref=as_li_tl?ie=UTF8&amp;tag=umbrel08-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B077SF8KMG&amp;linkId=5fa12eae55f9ecaed22984bdb9ebb546" target="_blank" class="link">1 TB SSD</a></div>
+                    <div data-w-id="982f5ceb-f96d-3bee-01e9-a99202cf0a58" class="list-item"><img src="images/checkmark.svg" loading="lazy" alt=""><a href="https://www.amazon.com/gp/product/B01LY97QE8/ref=as_li_tl?ie=UTF8&amp;tag=umbrel08-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B01LY97QE8&amp;linkId=c73e0df3b8ebd4e5a03f37b7e3b371b3" target="_blank" class="link">SSD Enclosure</a></div>
+                    <div data-w-id="982f5ceb-f96d-3bee-01e9-a99202cf0a58" class="list-item"><img src="images/checkmark.svg" loading="lazy" alt=""><a href="https://www.amazon.com/gp/product/B07B98GXQT/ref=as_li_tl?ie=UTF8&amp;tag=umbrel08-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07B98GXQT&amp;linkId=e72147bff5eef2a86d9d74300af70180" target="_blank" class="link">16GB+ microSD</a></div>
+                    <div data-w-id="982f5ceb-f96d-3bee-01e9-a99202cf0a58" class="list-item"><img src="images/checkmark.svg" loading="lazy" alt=""><a href="https://www.amazon.com/gp/product/B07ZTR9K9Z/ref=as_li_tl?ie=UTF8&amp;tag=umbrel08-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07ZTR9K9Z&amp;linkId=41269d57d8fbc8dfaf312893e689f5be" target="_blank" class="link">Ethernet Cable</a></div>
+                    <div data-w-id="982f5ceb-f96d-3bee-01e9-a99202cf0a58" class="list-item"><img src="images/checkmark.svg" loading="lazy" alt=""><a href="https://www.amazon.com/gp/product/B07WG4DW52/ref=as_li_tl?ie=UTF8&amp;tag=umbrel08-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07WG4DW52&amp;linkId=738df0605882b2422080f18d8a74e669" target="_blank" class="link">Case</a></div><img src="images/pi-vertical.png" loading="lazy" sizes="(max-width: 479px) 66vw, (max-width: 767px) 100vw, (max-width: 991px) 200px, 100vw" srcset="images/pi-vertical-p-500.png 500w, images/pi-vertical.png 536w" alt="" class="image-9"></div>
+                  <div class="column-4 w-col w-col-6 w-col-stack"><img src="images/pi-vertical.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 40vw, (max-width: 991px) 100vw, 229px" srcset="images/pi-vertical-p-500.png 500w, images/pi-vertical.png 536w" alt="" class="image-10"></div>
+                </div>
+                <a scroll="disable" data-w-id="118520b5-2724-026f-4a99-0c1f0c5a3a3a" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" href="#" class="gradient-button w-inline-block">
+                  <div class="button-text">How to Install</div><img src="images/arrow.svg" loading="lazy" alt="" class="button-arrow"></a>
+              </div>
+            </div>
+          </div>
+          <div class="w-col w-col-5 w-col-medium-6">
+            <div data-w-id="e37cada2-8e7a-32b6-ba52-c1bd269c3523" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="card">
+              <div class="card-container">
+                <div class="card-header">
+                  <h2 class="heading card-heading">Install Umbrel on Linux</h2>
+                </div>
+                <p class="paragraph text-left">Install Umbrel on any Linux-based OS, such as Ubuntu or Debian, or on a virtual machine on macOS or Windows.</p>
+                <div class="div-block-4">
+                  <div class="label">Minimum<br>requirements</div>
+                  <div data-w-id="18b978f7-1c03-b5e6-f9ff-e946a15c125e" class="list-item"><img src="images/checkmark.svg" loading="lazy" alt="">
+                    <div class="text-block">2GB+ RAM</div>
+                  </div>
+                  <div data-w-id="18b978f7-1c03-b5e6-f9ff-e946a15c125e" class="list-item"><img src="images/checkmark.svg" loading="lazy" alt="">
+                    <div class="text-block">600GB+ Free space</div>
+                  </div><img src="images/linux.svg" loading="lazy" alt="" class="image-5"></div>
+                <a data-w-id="cee77818-4f43-f9b8-ad24-87a5dc1cb4d4" href="https://github.com/getumbrel/umbrel#-installation" target="_blank" class="gradient-button w-inline-block">
+                  <div class="button-text">How to Install</div><img src="images/arrow.svg" loading="lazy" alt="" class="button-arrow"></a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
-
+    <div class="section dark">
+      <div class="container w-container">
+        <div class="w-row">
+          <div class="w-col w-col-10">
+            <h1 data-w-id="b07dd27d-9a69-d77a-2c58-a037fdeab004" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="big-heading text-left">pure bitcoin.<br>and nothing else.</h1>
+            <p data-w-id="b07dd27d-9a69-d77a-2c58-a037fdeab008" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="paragraph text-left">By running Bitcoin Core, your Umbrel stores and validates every single Bitcoin transaction that has ever existed and will ever exist. <strong>It’s “don’t trust, verify” on steroids</strong>. <br><br>Not only that, transacting with your Umbrel also helps keep the entire Bitcoin network decentralized; win-win!</p>
+          </div>
+          <div class="w-col w-col-2"></div>
+        </div><img src="images/bitcoin.png" loading="lazy" width="1140" data-w-id="b07dd27d-9a69-d77a-2c58-a037fdeab00b" srcset="images/bitcoin-p-500.png 500w, images/bitcoin-p-800.png 800w, images/bitcoin-p-1080.png 1080w, images/bitcoin-p-1600.png 1600w, images/bitcoin-p-2000.png 2000w, images/bitcoin-p-2600.png 2600w, images/bitcoin.png 2880w" sizes="(max-width: 479px) 96vw, (max-width: 767px) 93vw, (max-width: 991px) 728px, 940px" alt="" class="mockup"></div>
+    </div>
+    <div class="section dark">
+      <div class="container w-container">
+        <div class="w-row">
+          <div class="w-col w-col-10">
+            <h1 data-w-id="ba97f27a-9a86-551d-0c42-af3d0b47ee1d" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="big-heading text-left">live the future of bitcoin, today.</h1>
+            <p data-w-id="ba97f27a-9a86-551d-0c42-af3d0b47ee21" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="paragraph text-left">The Lightning Network offers a glimpse at the future of Bitcoin with <strong>ultra cheap and almost instant Bitcoin transactions</strong>.<br><br>Umbrel runs a Lightning node out of the box so you can start leveraging the power of Lightning today.</p>
+          </div>
+          <div class="w-col w-col-2"></div>
+        </div><img src="images/lightning.png" loading="lazy" width="1140" data-w-id="4e8f4d52-99f4-2112-6e3b-ef5a31b02fee" srcset="images/lightning-p-500.png 500w, images/lightning-p-800.png 800w, images/lightning-p-1080.png 1080w, images/lightning-p-1600.png 1600w, images/lightning.png 2280w" sizes="(max-width: 479px) 96vw, (max-width: 767px) 93vw, (max-width: 991px) 728px, 940px" alt="" class="mockup">
+        <div class="div-block-8">
+          <h3 class="heading-2">🍻 your first lightning channel is on us.</h3>
+          <p class="paragraph text-left">Once you&#x27;re up and running, <a href="https://twitter.com/intent/tweet?text=.%40getumbrel" target="_blank" class="link-3">tweet us a screenshot</a> of your Umbrel&#x27;s dashboard. We&#x27;ll then open a payment channel to your Umbrel so you can <strong>start receiving on the lightning network instantly</strong>.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container w-container">
+        <h1 data-w-id="26bb18cd-5f4d-d9e3-871d-e09270d63ee3" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="big-heading">we aren’t done yet.</h1>
+        <div class="div-block-3">
+          <div class="w-row">
+            <div class="column w-col w-col-6">
+              <div data-w-id="9d2f19f2-5248-4bc6-00bc-ba6b249f1aaa" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="card">
+                <div class="card-container">
+                  <div class="card-header">
+                    <h2 class="heading card-heading">privacy.<br>by default.</h2><img src="images/icon-privacy.svg" loading="lazy" alt="" class="card-icon"></div>
+                  <p class="paragraph text-left">All services on Umbrel, including Bitcoin, Lightning and Electrum are configured to use Tor by default, thus preserving your anonymity at all times.</p>
+                </div>
+              </div>
+              <div data-w-id="aba3d284-be84-8779-f904-e3ab67a9318e" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="card">
+                <div class="card-container">
+                  <div class="card-header">
+                    <h2 class="heading card-heading">automatic<br>backups.</h2><img src="images/icon-backups.svg" loading="lazy" alt="" class="card-icon"></div>
+                  <p class="paragraph text-left">No more worrying about manually backing up your Lightning channels. Every time you open or close a channel, we store an encrypted copy of your backup that you can download and decrypt with your 24 secret words during recovery.</p>
+                </div>
+              </div>
+            </div>
+            <div class="column-2 w-col w-col-6">
+              <div data-w-id="f809ac92-dee9-2b09-4d4e-5dab60c9f22c" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="card">
+                <div class="card-container">
+                  <div class="card-header">
+                    <h2 class="heading card-heading">access from<br>anywhere.</h2><img src="images/icon-remote.svg" loading="lazy" alt="" class="card-icon"></div>
+                  <p class="paragraph text-left">Securely access your Umbrel from anywhere in the world using a Tor-enabled browser, even from your couch.</p>
+                </div><img src="images/remote-access.png" loading="lazy" data-w-id="3c9de3cf-5798-819a-1a2a-3ace1a7c790c" sizes="(max-width: 479px) 80vw, (max-width: 767px) 78vw, (max-width: 991px) 307.796875px, 403.1875px" srcset="images/remote-access-p-500.png 500w, images/remote-access-p-800.png 800w, images/remote-access.png 1054w" alt="" class="image-4"></div>
+              <div data-w-id="aba3d284-be84-8779-f904-e3ab67a93198" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="card">
+                <div class="card-container">
+                  <div class="card-header">
+                    <h2 class="heading card-heading">free and<br>open.</h2><img src="images/icon-free.svg" loading="lazy" alt="" class="card-icon"></div>
+                  <p class="paragraph text-left">Umbrel is available for free and all of our source code is available on <a href="https://github.com/getumbrel/umbrel" target="_blank" class="link-2">GitHub</a>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div id="tweets-top" data-w-id="0192eaeb-5713-faad-d3d1-9a910ca06b04" class="tweets to-left">
+        <div class="tweet w-embed">
+          <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">Loving <a href="https://twitter.com/getumbrel?ref_src=twsrc%5Etfw">@getumbrel</a> <a href="https://twitter.com/hashtag/Bitcoin?src=hash&amp;ref_src=twsrc%5Etfw">#Bitcoin</a> <a href="https://t.co/uSfe65Hel1">pic.twitter.com/uSfe65Hel1</a></p>&mdash; Grey Wizard (@GreyWizard8) <a href="https://twitter.com/GreyWizard8/status/1313719072392196099?ref_src=twsrc%5Etfw">October 7, 2020</a></blockquote>
+        </div>
+        <div class="tweet w-embed">
+          <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr"><a href="https://twitter.com/getumbrel?ref_src=twsrc%5Etfw">@getumbrel</a> Umbrel looking very stylish. Tried other raspi node setups - this is by far the simplest. Good to be running <a href="https://twitter.com/hashtag/bitcoin?src=hash&amp;ref_src=twsrc%5Etfw">#bitcoin</a> - again. <a href="https://t.co/JvYIFhpB1f">pic.twitter.com/JvYIFhpB1f</a></p>&mdash; 𝗧₿𝗢𝗡𝗘🥩 (@SteakDestroyer) <a href="https://twitter.com/SteakDestroyer/status/1306084778957963265?ref_src=twsrc%5Etfw">September 16, 2020</a></blockquote>
+        </div>
+        <div class="tweet w-embed">
+          <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">This is my first node. There are many like it, but this one is mine! And I love it! And will learn to use it! Thank you <a href="https://twitter.com/getumbrel?ref_src=twsrc%5Etfw">@getumbrel</a> and <a href="https://twitter.com/hashtag/bitcoin?src=hash&amp;ref_src=twsrc%5Etfw">#bitcoin</a> <a href="https://t.co/FBT0SvBruu">pic.twitter.com/FBT0SvBruu</a></p>&mdash; Human Debris (@human_debris420) <a href="https://twitter.com/human_debris420/status/1310720569206345728?ref_src=twsrc%5Etfw">September 28, 2020</a></blockquote>
+        </div>
+        <div class="tweet w-embed">
+          <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">you: &quot;using a bitcoin node is too difficult&quot;<a href="https://twitter.com/getumbrel?ref_src=twsrc%5Etfw">@getumbrel</a>: &quot;hold my beer&quot; <a href="https://t.co/wnAN18Que3">pic.twitter.com/wnAN18Que3</a></p>&mdash; Matt Odell (@matt_odell) <a href="https://twitter.com/matt_odell/status/1298365296064057350?ref_src=twsrc%5Etfw">August 25, 2020</a></blockquote>
+        </div>
+        <div class="tweet w-embed">
+          <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr"><a href="https://twitter.com/getumbrel?ref_src=twsrc%5Etfw">@getumbrel</a> this is so clean... I&#39;ve been using mynodebtc for a while, but this UI is so smooth! <a href="https://t.co/JA6niiJBfd">pic.twitter.com/JA6niiJBfd</a></p>&mdash; HODL on, my wayward SOV (@satsyandiknowit) <a href="https://twitter.com/satsyandiknowit/status/1307831539082780672?ref_src=twsrc%5Etfw">September 20, 2020</a></blockquote>
+        </div>
+        <div class="tweet w-embed">
+          <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">Thank you <a href="https://twitter.com/getumbrel?ref_src=twsrc%5Etfw">@getumbrel</a> for such a convenient solution. Full Sync in 2 days. No problems at all. Easy access by smartphone. <a href="https://t.co/tt5RWN8XYz">pic.twitter.com/tt5RWN8XYz</a></p>&mdash; Meister Eder (@Etienne53542099) <a href="https://twitter.com/Etienne53542099/status/1306997306642833416?ref_src=twsrc%5Etfw">September 18, 2020</a></blockquote>
+        </div>
+        <div class="tweet w-embed">
+          <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">Having a great Sunday evening. <a href="https://twitter.com/getumbrel?ref_src=twsrc%5Etfw">@getumbrel</a> is syncing away so smoothly (and fast). The startup/setup wizard is the business - top work guys. <a href="https://t.co/AzFzjsk0fi">pic.twitter.com/AzFzjsk0fi</a></p>&mdash; darren.hodl (@darrenahunter) <a href="https://twitter.com/darrenahunter/status/1305058887775563776?ref_src=twsrc%5Etfw">September 13, 2020</a></blockquote>
+        </div>
+      </div>
+      <div class="container-4 w-container">
+        <h1 class="big-heading text-gradient">join the party.</h1>
+      </div>
+      <div id="tweets-bottom" class="tweets to-right">
+        <div class="tweet w-embed">
+          <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">So fucking slick <a href="https://twitter.com/getumbrel?ref_src=twsrc%5Etfw">@getumbrel</a> is killing it. <a href="https://twitter.com/matt_odell?ref_src=twsrc%5Etfw">@matt_odell</a> <a href="https://twitter.com/PeterMcCormack?ref_src=twsrc%5Etfw">@PeterMcCormack</a> <a href="https://twitter.com/hashtag/bitcoin?src=hash&amp;ref_src=twsrc%5Etfw">#bitcoin</a> <a href="https://t.co/lTd8Y9pf5I">pic.twitter.com/lTd8Y9pf5I</a></p>&mdash; Prof. Hardmoney (@blake3hamilton) <a href="https://twitter.com/blake3hamilton/status/1304581869971935234?ref_src=twsrc%5Etfw">September 12, 2020</a></blockquote>
+        </div>
+        <div class="tweet w-embed">
+          <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">Got my <a href="https://twitter.com/getumbrel?ref_src=twsrc%5Etfw">@getumbrel</a> node syncing up ready to roll! Dead easy even for a techno-duffer like me. <a href="https://twitter.com/hashtag/bitcoin?src=hash&amp;ref_src=twsrc%5Etfw">#bitcoin</a> <a href="https://twitter.com/search?q=%24BTCUSD&amp;src=ctag&amp;ref_src=twsrc%5Etfw">$BTCUSD</a> <a href="https://twitter.com/hashtag/noderunner?src=hash&amp;ref_src=twsrc%5Etfw">#noderunner</a> <a href="https://twitter.com/hashtag/LND?src=hash&amp;ref_src=twsrc%5Etfw">#LND</a> <a href="https://twitter.com/hashtag/lightningnetwork?src=hash&amp;ref_src=twsrc%5Etfw">#lightningnetwork</a> <a href="https://t.co/Pr4lM63iGf">pic.twitter.com/Pr4lM63iGf</a></p>&mdash; Trader Bean (Bitcoin) (@bean_captain) <a href="https://twitter.com/bean_captain/status/1304066990387138560?ref_src=twsrc%5Etfw">September 10, 2020</a></blockquote>
+        </div>
+        <div class="tweet w-embed">
+          <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">So happy to finally be running my own <a href="https://twitter.com/hashtag/bitcoin?src=hash&amp;ref_src=twsrc%5Etfw">#bitcoin</a> full node. Great job by <a href="https://twitter.com/getumbrel?ref_src=twsrc%5Etfw">@getumbrel</a> for making it this effortless. I also appreciate the privacy first approach and the sleek GUI. <a href="https://t.co/yYWdLcZwOS">pic.twitter.com/yYWdLcZwOS</a></p>&mdash; Finnish.hodl 🇫🇮*🔑⚡️ (@finnishhodl) <a href="https://twitter.com/finnishhodl/status/1304113021770440707?ref_src=twsrc%5Etfw">September 10, 2020</a></blockquote>
+        </div>
+        <div class="tweet w-embed">
+          <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">Sending some sats from my <a href="https://twitter.com/bluewalletio?ref_src=twsrc%5Etfw">@bluewalletio</a> wallet to my <a href="https://twitter.com/getumbrel?ref_src=twsrc%5Etfw">@getumbrel</a> node. Super smooth, all from my phone. <a href="https://t.co/Y40x0AiON5">pic.twitter.com/Y40x0AiON5</a></p>&mdash; Chris Betz (@thechrisbetz) <a href="https://twitter.com/thechrisbetz/status/1301694552978358273?ref_src=twsrc%5Etfw">September 4, 2020</a></blockquote>
+        </div>
+        <div class="tweet w-embed">
+          <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">First <a href="https://twitter.com/hashtag/Pi?src=hash&amp;ref_src=twsrc%5Etfw">#Pi</a> project: running a <a href="https://twitter.com/hashtag/bitcoin?src=hash&amp;ref_src=twsrc%5Etfw">#bitcoin</a> node! If I could set it up anyone can do it :) <br>Thanks <a href="https://twitter.com/getumbrel?ref_src=twsrc%5Etfw">@getumbrel</a> for the amazing work and clean UI! 🙏 <br>Next step: setting up some <a href="https://twitter.com/hashtag/Lightning?src=hash&amp;ref_src=twsrc%5Etfw">#Lightning</a> channels <a href="https://t.co/AOlX3IUOMO">pic.twitter.com/AOlX3IUOMO</a></p>&mdash; Crypto M (@cryptomacaroni) <a href="https://twitter.com/cryptomacaroni/status/1300759049944920070?ref_src=twsrc%5Etfw">September 1, 2020</a></blockquote>
+        </div>
+        <div class="tweet w-embed">
+          <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">Damn. I have to be honest I put off running this until next weekend initially because I thought it would take longer than... literally 10 seconds to be up and runnning. <a href="https://twitter.com/getumbrel?ref_src=twsrc%5Etfw">@getumbrel</a> is <a href="https://twitter.com/hashtag/Bitcoin?src=hash&amp;ref_src=twsrc%5Etfw">#Bitcoin</a> made beautiful <a href="https://t.co/Oy3cHoD0i7">pic.twitter.com/Oy3cHoD0i7</a></p>&mdash; Daniel Pichler 👨‍💻 (@PichlerD) <a href="https://twitter.com/PichlerD/status/1298629691109249024?ref_src=twsrc%5Etfw">August 26, 2020</a></blockquote>
+        </div>
+        <div class="tweet w-embed">
+          <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">Also running <a href="https://twitter.com/getumbrel?ref_src=twsrc%5Etfw">@getumbrel</a>. Bitcoin is becoming easy and friendly. <br>More and more, ready for the masses. Smoothest onboarding to a full node. Looking forward for more services to be added. <a href="https://t.co/4PCXusnLFI">pic.twitter.com/4PCXusnLFI</a></p>&mdash; Pedro 🧨 (@pedromvpg) <a href="https://twitter.com/pedromvpg/status/1298447404526641152?ref_src=twsrc%5Etfw">August 26, 2020</a></blockquote>
+        </div>
+      </div>
+    </div>
+    <div class="section dark">
+      <div class="container w-container">
+        <div class="w-row">
+          <div class="w-col w-col-10">
+            <h1 data-w-id="9ffa18b9-261d-c85d-78cb-3902233af05c" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="big-heading text-left">in fact, the party’s just getting started.</h1>
+            <p data-w-id="9ffa18b9-261d-c85d-78cb-3902233af05e" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="paragraph text-left mb-60">There’s a lot coming up! Sign up to be notified about our upcoming features and announcements.
+              <br><br>Needless to say, spam is our common enemy.</p>
+            <div class="w-row">
+              <div class="w-col w-col-9">
+                <div class="w-form">
+                  <form id="email-form" name="email-form" data-name="Email Form" method="post" action="https://umbrel.us4.list-manage.com/subscribe/post?u=988de5c1824a0b5075b2cc279&amp;amp;id=5dd6f49a69" data-w-id="9ffa18b9-261d-c85d-78cb-3902233af066" style="-webkit-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="form"><input type="email" class="text-field w-input" maxlength="256" name="EMAIL" data-name="EMAIL" placeholder="Email address" id="email-input" required=""><input type="submit" value="Sign up" data-wait="Signing up..." class="submit-button w-button"></form>
+                  <div class="success-message w-form-done">
+                    <div class="text-block-4">Awesome, you&#x27;re signed up! We&#x27;ll keep you posted :)</div>
+                  </div>
+                  <div class="error-message w-form-fail">
+                    <div class="text-block-5">Oops! Something went wrong. Can you please try again?</div>
+                  </div>
+                  <div class="social"><a href="https://t.me/getumbrel" target="_blank" class="social-link w-inline-block"><img src="images/telegram.svg" alt=""></a><a href="https://twitter.com/getumbrel" target="_blank" class="social-link w-inline-block"><img src="images/twitter.svg" alt=""></a><a href="https://www.reddit.com/r/getumbrel" target="_blank" class="social-link w-inline-block"><img src="images/reddit.svg" alt=""></a><a href="https://github.com/getumbrel/umbrel" target="_blank" class="social-link w-inline-block"><img src="images/github.svg" alt=""></a></div>
+                </div>
+              </div>
+              <div class="w-col w-col-3"></div>
+            </div>
+          </div>
+          <div class="w-col w-col-2"></div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer" class="footer"><img src="images/umbrella.png" loading="lazy" data-w-id="c8a6546e-739e-d9cd-1c18-4578b190c782" alt="" class="image-6">
+      <div class="text-block-3">thank you, satoshi</div>
+    </footer>
+  </div>
+  <div data-w-id="a6a10fe0-7e0d-2d0d-9c9b-1d1119cf105a" style="display:none;opacity:0" class="modal-wrapper">
+    <div class="modal">
+      <div class="card relative modal-card">
+        <div class="card-container">
+          <div class="card-header">
+            <h2 class="heading card-heading modal-heading">Install Umbrel on a Raspberry Pi 4</h2><a scroll="enable" data-w-id="e4ad42c5-7943-d638-2ed3-904b0f475415" href="#" class="w-inline-block"><img src="images/cross.svg" loading="lazy" width="29" alt=""></a></div>
+          <div data-animation="slide" data-hide-arrows="1" data-duration="500" class="slider-2 w-slider">
+            <div class="w-slider-mask">
+              <div class="slide w-slide">
+                <h4 class="heading-step">Step 1. Make sure you’ve got everything ready.</h4>
+                <p class="paragraph text-left mb-60">Click the individual parts below to directly buy them from Amazon.</p>
+                <div class="columns w-row">
+                  <div class="w-col w-col-5 w-col-small-small-stack w-col-tiny-tiny-stack">
+                    <div class="list-item"><img src="images/checkmark.svg" loading="lazy" alt=""><a href="https://www.amazon.com/gp/product/B08C4SK5C3/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B08C4SK5C3&amp;linkCode=as2&amp;tag=umbrel08-20&amp;linkId=d3f17fd4813568c4863d239839311d67" target="_blank" class="link">Raspberry Pi 4</a></div>
+                    <div class="list-item"><img src="images/checkmark.svg" loading="lazy" alt=""><a href="https://www.amazon.com/gp/product/B077SF8KMG/ref=as_li_tl?ie=UTF8&amp;tag=umbrel08-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B077SF8KMG&amp;linkId=5fa12eae55f9ecaed22984bdb9ebb546" target="_blank" class="link">1 TB SSD</a></div>
+                    <div class="list-item"><img src="images/checkmark.svg" loading="lazy" alt=""><a href="https://www.amazon.com/gp/product/B01LY97QE8/ref=as_li_tl?ie=UTF8&amp;tag=umbrel08-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B01LY97QE8&amp;linkId=c73e0df3b8ebd4e5a03f37b7e3b371b3" target="_blank" class="link">SSD Enclosure</a></div>
+                    <div class="list-item"><img src="images/checkmark.svg" loading="lazy" alt=""><a href="https://www.amazon.com/gp/product/B07B98GXQT/ref=as_li_tl?ie=UTF8&amp;tag=umbrel08-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07B98GXQT&amp;linkId=e72147bff5eef2a86d9d74300af70180" target="_blank" class="link">16GB+ microSD</a></div>
+                    <div class="list-item"><img src="images/checkmark.svg" loading="lazy" alt=""><a href="https://www.amazon.com/gp/product/B07ZTR9K9Z/ref=as_li_tl?ie=UTF8&amp;tag=umbrel08-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07ZTR9K9Z&amp;linkId=41269d57d8fbc8dfaf312893e689f5be" target="_blank" class="link">Ethernet Cable</a></div>
+                    <div class="list-item"><img src="images/checkmark.svg" loading="lazy" alt=""><a href="https://www.amazon.com/gp/product/B07WG4DW52/ref=as_li_tl?ie=UTF8&amp;tag=umbrel08-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07WG4DW52&amp;linkId=738df0605882b2422080f18d8a74e669" target="_blank" class="link">Case</a></div>
+                  </div>
+                  <div class="column-3 w-col w-col-7 w-col-small-small-stack w-col-tiny-tiny-stack"><img src="images/step1.png" loading="lazy" sizes="100vw" srcset="images/step1-p-500.png 500w, images/step1-p-800.png 800w, images/step1.png 850w" alt="" class="image-7"></div>
+                </div>
+              </div>
+              <div class="slide w-slide">
+                <h4 class="heading-step">Step 2. Download Umbrel OS.</h4>
+                <p class="paragraph text-left mb-60">Download Umbrel OS for Raspberry Pi on your computer.</p>
+                <a href="https://github.com/getumbrel/umbrel-os/releases/download/v0.2.13/umbrel-os-v0.2.13.zip" target="_blank" class="gradient-button secondary w-inline-block">
+                  <div class="button-text">Download Umbrel OS 0.2.13</div><img src="images/arrow.svg" loading="lazy" alt="" class="button-arrow"></a>
+              </div>
+              <div class="slide w-slide">
+                <h4 class="heading-step">Step 3. Download and install Balena Etcher.</h4>
+                <p class="paragraph text-left mb-60">Balena Etcher is required to flash the Umbrel OS file that you downloaded in the previous step onto the microSD card.</p>
+                <a href="https://www.balena.io/etcher" target="_blank" class="gradient-button secondary w-inline-block">
+                  <div class="button-text">Download Balena Etcher</div><img src="images/arrow.svg" loading="lazy" alt="" class="button-arrow"></a>
+              </div>
+              <div class="slide w-slide">
+                <h4 class="heading-step">Step 4. Plug the microSD card in your computer.</h4>
+                <p class="paragraph text-left mb-20">You might need a card-reader if your computer doesn’t have one. <a href="https://www.amazon.com/gp/product/B07G5JV2B5/ref=as_li_tl?ie=UTF8&amp;tag=umbrel08-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07G5JV2B5&amp;linkId=474cdf41a783f4ea511b9affa05f33d8" target="_blank" class="text-link">Here’s a good one on Amazon.</a></p><img src="images/step4.svg" loading="lazy" alt="" class="step-image"></div>
+              <div class="slide w-slide">
+                <h4 class="heading-step">Step 5. Flash Umbrel OS.</h4>
+                <p class="paragraph text-left">Open Balena Etcher and flash the downloaded Umbrel OS file on the microSD card.</p><img src="images/step5.png" loading="lazy" width="584" sizes="100vw" srcset="images/step5-p-500.png 500w, images/step5-p-800.png 800w, images/step5-p-1080.png 1080w, images/step5.png 1168w" alt="" class="step-image"></div>
+              <div class="slide w-slide">
+                <h4 class="heading-step">Step 6. Insert the microSD card in the Pi.</h4>
+                <p class="paragraph text-left">After the flash is successful, remove the microSD card from your computer and insert it in the Raspberry Pi.</p><img src="images/step6.svg" loading="lazy" alt="" class="step-image"></div>
+              <div class="slide w-slide">
+                <h4 class="heading-step">Step 7. Connect the SSD.</h4>
+                <p class="paragraph text-left mb-60">Put the SSD in its enclosure, and plug it into any of the two USB 3.0 ports (blue colored) on the Raspberry Pi.</p><img src="images/step7.svg" loading="lazy" alt="" class="step-image"></div>
+              <div class="slide w-slide">
+                <h4 class="heading-step">Step 8. Connect to your router.</h4>
+                <p class="paragraph text-left mb-60">Connect one end of the ethernet cable to the Raspberry Pi and the other end to any vacant port on your router.</p><img src="images/step8.svg" loading="lazy" alt="" class="step-image"></div>
+              <div class="slide w-slide">
+                <h4 class="heading-step">Step 9. Power up.</h4>
+                <p class="paragraph text-left mb-60">Connect the power supply to the Raspberry Pi to turn it on.<br></p><img src="images/step9.svg" loading="lazy" alt="" class="step-image"></div>
+              <div class="slide w-slide">
+                <h4 class="heading-step">Step 10. Aaaand that&#x27;s it!</h4>
+                <p class="paragraph text-left mb-60">After 5 minutes, your Umbrel will be accessible at <a href="http://umbrel.local" target="_blank" class="text-link">http://umbrel.local</a> on any device that’s connected to the same network as the Raspberry Pi.<br><br>If you can’t access umbrel.local, try finding the IP address of your Raspberry Pi using <a href="https://angryip.org" target="_blank" class="text-link">Angry IP Scanner</a> and type that in the browser instead of &quot;umbrel.local&quot;.<br></p><img src="images/step10.png" loading="lazy" sizes="100vw" srcset="images/step10-p-500.png 500w, images/step10-p-800.png 800w, images/step10-p-1080.png 1080w, images/step10.png 1534w" alt="" class="step-image"></div>
+            </div>
+            <div class="arrow w-slider-arrow-left"><img src="images/arrow.svg" loading="lazy" width="10" alt="" class="image-11 flip-image"></div>
+            <div class="arrow arrow-next w-slider-arrow-right"><img src="images/arrow.svg" loading="lazy" width="10" alt="" class="image-11"></div>
+            <div class="w-slider-nav w-slider-nav-invert w-round"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div scroll="enable" data-w-id="0788b3f1-eecf-14c9-fd8c-86e134bfed98" class="modal-background"></div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5f845b2dcb9d1727057081d4" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <!--  Twitter's widget.js  -->
+  <script>
+      $(window).on('load', function() {
+        window.setTimeout(function() {
+          $.getScript("https://platform.twitter.com/widgets.js", function(data, textStatus, jqxhr) {
+            twttr.events.bind(
+              'loaded',
+              function(event) {
+                $(".tweets").addClass("active");
+              });
+          });
+        }, 5000);
+      });
+    </script>
+  <!--  Disable/Enable Body Scroll  -->
+  <script>
+      var Webflow = Webflow || [];
+      var $body = $(document.body);
+      var scrollPosition = 0;
+      Webflow.push(function() {
+        $('[scroll=disable]').on('click', function() {
+          var oldWidth = $body.innerWidth();
+          scrollPosition = window.pageYOffset;
+          $body.css('overflow', 'hidden');
+          $body.css('position', 'fixed');
+          $body.css('top', `-${scrollPosition}px`);
+          $body.width(oldWidth);
+        });
+        $('[scroll=enable]').on('click', function() {
+          if ($body.css('overflow') != 'hidden') {
+            scrollPosition = window.pageYOffset;
+          }
+          $body.css('overflow', '');
+          $body.css('position', '');
+          $body.css('top', '');
+          $body.width('');
+          $(window).scrollTop(scrollPosition);
+        });
+      });
+    </script>
 </body>
-
 </html>
