@@ -878,6 +878,10 @@
   .image-9 {
     display: none;
   }
+  .div-block-8 {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
 
 @media screen and (max-width: 479px) {
