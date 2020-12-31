@@ -790,33 +790,41 @@
   .div-block-2 {
     top: -80px;
   }
+
   .card-container {
     overflow: hidden;
     padding: 40px 30px;
   }
+
   .wallets-container {
     padding-right: 10px;
     padding-left: 10px;
   }
+
   .wallet-icon {
     width: 60px;
     height: 60px;
     border-radius: 12px;
   }
+
   .wallet-name {
     font-size: 22px;
     line-height: 30px;
   }
+
   .footer {
     padding-right: 20px;
     padding-left: 20px;
   }
+
   .modal {
     max-width: 90vw;
   }
+
   .column-4 {
     display: none;
   }
+
   .image-9 {
     position: absolute;
     top: 40px;
@@ -831,53 +839,67 @@
     font-size: 54px;
     line-height: 54px;
   }
+
   .big-heading {
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: 70px;
     line-height: 70px;
   }
+
   .big-heading.text-left {
     font-size: 70px;
     line-height: 70px;
   }
+
   .container {
     padding-right: 20px;
     padding-left: 20px;
   }
+
   .wallet {
     padding: 12px;
   }
+
   .wallet-name {
     margin-left: 12px;
   }
+
   .footer {
     padding: 40px 20px;
   }
+
   .mockup {
     margin-top: 40px;
   }
+
   .link-block {
     display: none;
   }
+
   .link-block.button-hero {
     display: block;
     margin-top: 20px;
   }
+
   .columns-2 {
     padding-right: 10px;
     padding-left: 10px;
   }
+
   .columns-3 {
     padding-right: 10px;
     padding-left: 10px;
   }
+
   .column-4 {
     display: block;
   }
+
   .image-9 {
     display: none;
   }
+
   .div-block-8 {
     padding-right: 10px;
     padding-left: 10px;
@@ -891,25 +913,31 @@
     font-size: 46px;
     line-height: 46px;
   }
+
   .big-heading {
     font-size: 68px;
     line-height: 68px;
   }
+
   .big-heading.text-left {
     font-size: 52px;
     line-height: 52px;
   }
+
   .big-heading.text-gradient {
     line-height: 68px;
   }
+
   .paragraph {
     margin-bottom: 20px;
     font-size: 20px;
     line-height: 26px;
   }
+
   .paragraph.text-left.mb-60 {
     margin-bottom: 40px;
   }
+
   .image {
     width: 130%;
     max-width: 130%;
@@ -918,44 +946,54 @@
     -ms-transform: none;
     transform: none;
   }
+
   .container {
     padding-right: 10px;
     padding-left: 10px;
   }
+
   .heading.card-heading.modal-heading {
     font-size: 20px;
     line-height: 22px;
   }
+
   .card-container {
     overflow: hidden;
     padding-right: 20px;
     padding-left: 20px;
   }
+
   .wallets-container {
     overflow: scroll;
     padding-top: 20px;
   }
+
   .wallet {
     margin-left: 10px;
     padding: 10px;
     border-radius: 10px;
   }
+
   .wallet-icon {
     width: 40px;
     height: 40px;
     border-radius: 6px;
   }
+
   .wallet-name {
     margin-left: 10px;
     font-size: 20px;
     line-height: 22px;
   }
+
   .list-item {
     margin-bottom: 18px;
   }
+
   .image-5 {
     z-index: -1;
   }
+
   .text-field {
     margin-bottom: 20px;
     padding-right: 160px;
@@ -963,15 +1001,18 @@
     line-height: 20px;
     font-weight: 400;
   }
+
   .social {
     z-index: 2;
   }
+
   .submit-button {
     min-width: 146px;
     font-size: 18px;
     line-height: 20px;
     font-weight: 400;
   }
+
   .footer {
     display: -webkit-box;
     display: -webkit-flex;
@@ -992,13 +1033,16 @@
     align-items: center;
     text-align: left;
   }
+
   .image-6 {
     display: block;
   }
+
   .text-block-3 {
     width: 100%;
     text-align: center;
   }
+
   .header {
     padding-right: 20px;
     padding-left: 20px;
@@ -1007,6 +1051,7 @@
     -ms-flex-align: center;
     align-items: center;
   }
+
   .modal-wrapper {
     grid-auto-columns: 1fr;
     -ms-grid-columns: 1fr 1fr;
@@ -1014,48 +1059,60 @@
     -ms-grid-rows: auto auto;
     grid-template-rows: auto auto;
   }
+
   .modal {
     max-width: 90vw;
   }
+
   .heading-step {
     font-size: 24px;
     line-height: 26px;
   }
+
   .arrow {
     opacity: 0;
   }
+
   .column-3 {
     display: none;
   }
+
   .gradient-button.secondary {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
+
   .button-text {
     padding-right: 20px;
     line-height: 22px;
   }
+
   .link-block.button-hero {
     margin-top: 10px;
   }
+
   .logo {
     width: auto;
     height: 50px;
   }
+
   .column-4 {
     display: none;
   }
+
   .column-5 {
     position: relative;
   }
+
   .image-9 {
     right: -120px;
     display: block;
     width: 170px;
     margin-top: 40px;
   }
+
   .strike {
     top: 63px;
     height: 6px;
