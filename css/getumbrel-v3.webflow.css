@@ -424,6 +424,7 @@
 .mockup {
   height: auto;
   margin-top: 60px;
+  margin-bottom: 60px;
   border: 1px solid #eceef1;
   border-radius: 6px;
   box-shadow: 1px 1px 60px 0 #e0e0e3;
@@ -759,6 +760,7 @@
 }
 
 .div-block-8 {
+  display: none;
   margin-top: 40px;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -1105,6 +1107,10 @@
   .text-block-3 {
     width: 100%;
     text-align: center;
+  }
+
+  .mockup {
+    margin-bottom: 20px;
   }
 
   .header {
