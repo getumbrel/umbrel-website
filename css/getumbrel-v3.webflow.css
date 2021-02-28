@@ -232,6 +232,14 @@
   text-transform: uppercase;
 }
 
+.label.mb-10 {
+  margin-bottom: 10px;
+}
+
+.label.mb-20 {
+  margin-bottom: 20px;
+}
+
 .list-item {
   display: -webkit-box;
   display: -webkit-flex;
@@ -850,6 +858,46 @@
   color: #fff;
   line-height: 20px;
   text-decoration: none;
+}
+
+.note {
+  margin-bottom: 30px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #fffcbb;
+}
+
+.note.mt-10 {
+  margin-top: 20px;
+}
+
+.note.mb-20 {
+  margin-bottom: 20px;
+}
+
+.note.mb-20.note-green {
+  padding: 0px 0px 10px;
+  background-color: #fff;
+}
+
+.text-block-8 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.note-text {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.note-text.note-text-2 {
+  color: #626366;
+}
+
+.note-link {
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: 500;
 }
 
 @media screen and (max-width: 991px) {
