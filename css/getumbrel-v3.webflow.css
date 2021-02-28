@@ -70,6 +70,10 @@
   line-height: 20px;
 }
 
+.paragraph.mb-30 {
+  margin-bottom: 30px;
+}
+
 .image {
   display: block;
   width: 120%;
@@ -96,6 +100,10 @@
   position: relative;
 }
 
+.container.text-center {
+  text-align: center;
+}
+
 .hero {
   margin-bottom: 60px;
 }
@@ -118,6 +126,16 @@
 
 .card.relative.modal-card {
   margin-bottom: 0px;
+}
+
+.card.card-develop-apps {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  margin-top: 140px;
+  margin-right: -60px;
+  background-color: #fff;
+  box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
@@ -155,9 +173,20 @@
   line-height: 32px;
 }
 
+.heading.card-heading.develop-apps-card-heading {
+  margin-top: 40px;
+  font-weight: 700;
+}
+
 .card-container {
+  position: relative;
+  overflow: hidden;
   height: 100%;
   padding: 50px 40px;
+}
+
+.card-container.developer-card-container {
+  overflow: visible;
 }
 
 .image-4 {
@@ -305,7 +334,7 @@
   margin-bottom: 40px;
 }
 
-.text-block-2 {
+.badge {
   position: absolute;
   left: 60px;
   top: -15px;
@@ -320,6 +349,19 @@
   font-size: 14px;
   line-height: 30px;
   font-weight: 600;
+}
+
+.badge.badge-relative {
+  position: relative;
+  left: auto;
+  top: auto;
+  display: inline-block;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.badge.badge-relative.mb-20 {
+  margin-bottom: 20px;
 }
 
 .image-5 {
@@ -432,10 +474,14 @@
 .mockup {
   height: auto;
   margin-top: 60px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   border: 1px solid #eceef1;
   border-radius: 6px;
   box-shadow: 1px 1px 60px 0 #e0e0e3;
+}
+
+.mockup.mb-0 {
+  margin-bottom: 0px;
 }
 
 .header {
@@ -833,10 +879,7 @@
 }
 
 .link-block-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   padding: 12px 10px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -900,14 +943,224 @@
   font-weight: 500;
 }
 
+.image-13 {
+  display: none;
+  margin-right: auto;
+  margin-bottom: 60px;
+  margin-left: auto;
+}
+
+.arrow-link {
+  color: #5351fb;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.arrow-link.arrow-link-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.arrow-link-icon {
+  margin-left: 10px;
+}
+
+.arrow-link-text {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.app-store-image-left {
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  z-index: -1;
+  width: 500px;
+  border: 1px solid #eceef1;
+  border-radius: 1%;
+  box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  -webkit-transform: translate(180px, 0px);
+  -ms-transform: translate(180px, 0px);
+  transform: translate(180px, 0px);
+}
+
+.app-store-hero-image {
+  display: block;
+  width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid #eceef1;
+  border-radius: 1%;
+  box-shadow: 1px 1px 40px 0 rgba(0, 0, 0, 0.1);
+}
+
+.app-store-image-right {
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  z-index: -1;
+  width: 500px;
+  border: 1px solid #eceef1;
+  border-radius: 1%;
+  box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.1);
+  -webkit-transform: translate(-180px, 0px);
+  -ms-transform: translate(-180px, 0px);
+  transform: translate(-180px, 0px);
+}
+
+.app-store-images {
+  position: relative;
+  margin-top: 60px;
+}
+
+.apps-container {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.app {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 370px;
+  margin-right: 20px;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.18);
+}
+
+.app-name {
+  color: #3d3e40;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.app-tagline {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+}
+
+.app-details {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: left;
+}
+
+.image-14 {
+  width: 84px;
+  height: 84px;
+  margin-right: 20px;
+  border-radius: 16px;
+}
+
+.apps-row-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1990px;
+  margin-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-transform: translate(-62px, 0px);
+  -ms-transform: translate(-62px, 0px);
+  transform: translate(-62px, 0px);
+}
+
+.apps-row-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1990px;
+  padding-right: 20px;
+  padding-left: 20px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-transform: translate(-286px, 0px);
+  -ms-transform: translate(-286px, 0px);
+  transform: translate(-286px, 0px);
+}
+
+.image-15 {
+  position: absolute;
+  z-index: 0;
+  border-radius: 8px;
+}
+
+.image-16 {
+  position: absolute;
+  left: 40px;
+  top: -50px;
+  width: 120px;
+  height: 120px;
+}
+
+.image-17 {
+  width: auto;
+  height: 118px;
+}
+
+.app-icons-row {
+  width: 100%;
+}
+
+.app-icons-row.app-icons-row-2 {
+  -webkit-transform: translate(0px, -100%);
+  -ms-transform: translate(0px, -100%);
+  transform: translate(0px, -100%);
+}
+
+.app-icons-row.app-icons-row-3 {
+  -webkit-transform: translate(0px, -75%);
+  -ms-transform: translate(0px, -75%);
+  transform: translate(0px, -75%);
+}
+
+.app-store-icon {
+  display: block;
+  width: 20%;
+  max-width: 220px;
+  margin-right: auto;
+  margin-bottom: 40px;
+  margin-left: auto;
+}
+
 @media screen and (max-width: 991px) {
   .div-block-2 {
     top: -80px;
   }
 
   .card-container {
-    overflow: hidden;
     padding: 40px 30px;
+  }
+
+  .card-container.developer-card-container {
+    overflow: visible;
   }
 
   .wallets-container {
@@ -971,6 +1224,11 @@
     padding-left: 20px;
   }
 
+  .card.card-develop-apps {
+    margin-top: -60px;
+    margin-right: 0px;
+  }
+
   .wallet {
     padding: 12px;
   }
@@ -1018,6 +1276,38 @@
     padding-right: 10px;
     padding-left: 10px;
   }
+
+  .app-store-image-left {
+    display: none;
+  }
+
+  .app-store-image-right {
+    display: none;
+  }
+
+  .columns-5 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .image-15 {
+    position: relative;
+    display: block;
+    width: 80vw;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .app-store-icon {
+    margin-top: -20px;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -1029,8 +1319,8 @@
   }
 
   .big-heading {
-    font-size: 68px;
-    line-height: 68px;
+    font-size: 58px;
+    line-height: 60px;
   }
 
   .big-heading.text-left {
@@ -1059,6 +1349,11 @@
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
+  }
+
+  .section {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .container {
@@ -1242,6 +1537,19 @@
 
   .announcement-arrow {
     display: none;
+  }
+
+  .image-13 {
+    width: 90vw;
+  }
+
+  .app-store-icon {
+    min-width: 80px;
+    margin-top: 0px;
+  }
+
+  .app-icons-row-container {
+    margin-top: -20px;
   }
 }
 
