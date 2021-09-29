@@ -1,3 +1,7 @@
+a {
+  text-decoration: underline;
+}
+
 .strike-heading {
   padding-right: 10px;
   padding-left: 10px;
@@ -75,6 +79,10 @@
   z-index: 0;
 }
 
+.paragraph.text-left.text-dark {
+  color: #1d1d1f;
+}
+
 .paragraph.text-small {
   font-size: 16px;
   line-height: 20px;
@@ -109,6 +117,10 @@
   color: #fff;
 }
 
+.paragraph.mb-60 {
+  margin-bottom: 60px;
+}
+
 .bitcoin-explanation-img {
   display: block;
   width: 100%;
@@ -133,6 +145,10 @@
 
 .section.dark.develop-apps-section {
   background-image: linear-gradient(229deg, #ee8c8c, #994ba6);
+}
+
+.section.pt-0 {
+  padding-top: 0px;
 }
 
 .container {
@@ -181,6 +197,39 @@
 .card.card-develop-apps.card-dark {
   border-width: 0px;
   background-color: #262222;
+}
+
+.card.product-card {
+  border-style: none;
+  border-width: 0px;
+  box-shadow: 1px 1px 12px 0 rgba(0, 0, 0, 0.08);
+  -webkit-transition: all 300ms cubic-bezier(0, 0, .5, 1);
+  transition: all 300ms cubic-bezier(0, 0, .5, 1);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card.product-card:hover {
+  box-shadow: 1px 1px 12px 0 rgba(0, 0, 0, 0.16);
+  -webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  transform: scale(1.01);
+}
+
+.card.product-card.the-bitcoin-machines-card {
+  display: block;
+  width: 100%;
+  max-width: 460px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url('../images/thebitcoinmachines.jpg');
+  background-position: 0px 0px;
+  background-size: cover;
+}
+
+.card.product-card.cryptocloaks-card {
+  background-image: url('../images/cryptocloaks.jpg');
+  background-size: cover;
 }
 
 .card-header {
@@ -237,6 +286,11 @@
 
 .card-container.developer-card-container {
   overflow: visible;
+}
+
+.card-container.product-card-container {
+  min-height: 640px;
+  padding-top: 40px;
 }
 
 .image-4 {
@@ -323,6 +377,19 @@
   margin-bottom: 20px;
 }
 
+.label.mb-20.mt-0 {
+  margin-top: 0px;
+}
+
+.label.product-label {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  color: #77797b;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
 .list-item {
   display: -webkit-box;
   display: -webkit-flex;
@@ -341,6 +408,14 @@
   color: #3d3e40;
   line-height: 24px;
   font-weight: 700;
+}
+
+.link.primary-link {
+  font-weight: 500;
+}
+
+.link.primary-link.mt-20 {
+  margin-top: 20px;
 }
 
 .button {
@@ -390,7 +465,7 @@
 
 .badge {
   position: absolute;
-  left: 60px;
+  left: 50px;
   top: -15px;
   display: inline-block;
   height: 30px;
@@ -415,7 +490,29 @@
 }
 
 .badge.badge-relative.mb-20 {
+  margin-right: auto;
   margin-bottom: 20px;
+  margin-left: auto;
+}
+
+.badge.d-none {
+  display: none;
+}
+
+.badge.badge-secondary {
+  left: 50px;
+  top: 0px;
+  margin-top: 15px;
+  padding-right: 0px;
+  padding-left: 0px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.badge.badge-warning {
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffbe40), to(#ff9c40));
+  background-image: linear-gradient(90deg, #ffbe40, #ff9c40);
 }
 
 .image-5 {
@@ -741,6 +838,18 @@
   flex-wrap: wrap;
 }
 
+.container-3.container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .column-5 {
   margin-bottom: 20px;
 }
@@ -1040,9 +1149,21 @@
 }
 
 .arrow-link {
+  display: inline-block;
+  margin-top: 10px;
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
   color: #5351fb;
   font-weight: 500;
   text-decoration: none;
+}
+
+.arrow-link:hover {
+  -webkit-transform: translate(6px, 0px);
+  -ms-transform: translate(6px, 0px);
+  transform: translate(6px, 0px);
 }
 
 .arrow-link.arrow-link-center {
@@ -1540,6 +1661,37 @@
   align-items: center;
 }
 
+.badge-container {
+  text-align: center;
+}
+
+.product-cards-column {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.cta-buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.card-wrapper {
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
 @media screen and (max-width: 991px) {
   .div-block-2 {
     top: -80px;
@@ -1567,6 +1719,10 @@
   .wallet-name {
     font-size: 22px;
     line-height: 30px;
+  }
+
+  .badge {
+    left: 40px;
   }
 
   .footer {
@@ -1816,7 +1972,6 @@
   }
 
   .paragraph {
-    margin-bottom: 20px;
     font-size: 20px;
     line-height: 26px;
   }
@@ -1878,6 +2033,10 @@
 
   .list-item {
     margin-bottom: 18px;
+  }
+
+  .badge {
+    left: 30px;
   }
 
   .image-5 {
