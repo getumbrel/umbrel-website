@@ -467,6 +467,7 @@ a {
   position: absolute;
   left: 50px;
   top: -15px;
+  z-index: 1;
   display: inline-block;
   height: 30px;
   padding-right: 10px;
