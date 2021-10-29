@@ -1078,7 +1078,10 @@ a {
 }
 
 .announcement-header {
-  display: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding: 12px 10px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
