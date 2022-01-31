@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Mon Jan 17 2022 14:22:05 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Mon Jan 31 2022 15:36:08 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="61e577d77d5e4369fdee4927" data-wf-site="61e577d77d5e43b4d1ee4926" lang="en">
 <head>
   <meta charset="utf-8">
@@ -1000,7 +1000,7 @@
                       <a href="https://www.amazon.com/gp/product/B07WG4DW52/ref=as_li_tl?ie=UTF8&amp;tag=umbrel08-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07WG4DW52&amp;linkId=738df0605882b2422080f18d8a74e669" target="_blank" class="link">Case</a>
                     </div>
                   </div>
-                  <div class="column-3 w-col w-col-7 w-col-small-small-stack w-col-tiny-tiny-stack"><img src="images/step1.png" loading="lazy" sizes="(max-width: 479px) 100vw, 320px" srcset="images/step1-p-500.png 500w, images/step1-p-800.png 800w, images/step1.png 850w" alt="" class="image-7"></div>
+                  <div class="column-3 w-col w-col-7 w-col-small-small-stack w-col-tiny-tiny-stack"><img src="images/step1.png" loading="lazy" sizes="100vw" srcset="images/step1-p-500.png 500w, images/step1-p-800.png 800w, images/step1.png 850w" alt="" class="image-7"></div>
                 </div>
               </div>
               <div class="slide w-slide">
@@ -1024,7 +1024,7 @@
               </div>
               <div class="slide w-slide">
                 <h4 class="heading-step">Step 5. Flash Umbrel OS.</h4>
-                <p class="paragraph text-left">Open Balena Etcher and flash the downloaded Umbrel OS zip file on the microSD card.</p><img src="images/step5.png" loading="lazy" width="584" sizes="(max-width: 479px) 79vw, (max-width: 767px) 78vw, 584px" srcset="images/step5-p-500.png 500w, images/step5-p-800.png 800w, images/step5-p-1080.png 1080w, images/step5.png 1168w" alt="" class="step-image">
+                <p class="paragraph text-left">Open Balena Etcher and flash the downloaded Umbrel OS zip file on the microSD card.</p><img src="images/step5.png" loading="lazy" width="584" sizes="100vw" srcset="images/step5-p-500.png 500w, images/step5-p-800.png 800w, images/step5-p-1080.png 1080w, images/step5.png 1168w" alt="" class="step-image">
               </div>
               <div class="slide w-slide">
                 <h4 class="heading-step">Step 6. Insert the microSD card in the Pi.</h4>
@@ -1047,7 +1047,7 @@
               </div>
               <div class="slide w-slide">
                 <h4 class="heading-step">Step 10. Aaaand that&#x27;s it!</h4>
-                <p class="paragraph text-left mb-60">After 5 minutes, your Umbrel will be accessible at <a href="http://umbrel.local" target="_blank" class="text-link">http://umbrel.local</a> on any device that’s connected to the same network as the Raspberry Pi.<br></p><img src="images/step10.png" loading="lazy" sizes="(max-width: 479px) 79vw, (max-width: 767px) 80vw, (max-width: 991px) 83vw, 806px" srcset="images/step10-p-500.png 500w, images/step10-p-800.png 800w, images/step10-p-1080.png 1080w, images/step10.png 1534w" alt="" class="step-image">
+                <p class="paragraph text-left mb-60">After 5 minutes, your Umbrel will be accessible at <a href="http://umbrel.local" target="_blank" class="text-link">http://umbrel.local</a> on any device that’s connected to the same network as the Raspberry Pi.<br></p><img src="images/step10.png" loading="lazy" sizes="100vw" srcset="images/step10-p-500.png 500w, images/step10-p-800.png 800w, images/step10-p-1080.png 1080w, images/step10.png 1534w" alt="" class="step-image">
                 <div class="note mt-10">
                   <div class="note-text">👋 Can&#x27;t access your Umbrel? Use <a href="https://angryip.org" target="_blank" class="text-link"><strong>Angry IP Scanner</strong></a> to find the IP address of your Umbrel and type that in the browser instead of &quot;umbrel.local&quot;. If you&#x27;re using Windows, try accessing <a href="http://umbrel" target="_blank" class="text-link"><strong>http://umbrel</strong></a> in the browser. And if you&#x27;re using a VPN, try turning it off. Need help? Feel free to jump on our <a href="https://community.getumbrel.com" target="_blank" class="note-link">community forum</a>.</div>
                 </div>
@@ -1065,7 +1065,48 @@
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=61e577d77d5e43b4d1ee4926" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
-  <!--  Twitter's widget.js  -->
+  <script>
+      window.intercomSettings = {
+        api_base: "https://api-iam.intercom.io",
+        app_id: "ewmy8if7"
+      };
+    </script>
+  <script>
+      // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/ewmy8if7'
+      (function() {
+        var w = window;
+        var ic = w.Intercom;
+        if (typeof ic === "function") {
+          ic('reattach_activator');
+          ic('update', w.intercomSettings);
+        } else {
+          var d = document;
+          var i = function() {
+            i.c(arguments);
+          };
+          i.q = [];
+          i.c = function(args) {
+            i.q.push(args);
+          };
+          w.Intercom = i;
+          var l = function() {
+            var s = d.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'https://widget.intercom.io/widget/ewmy8if7';
+            var x = d.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          };
+          if (document.readyState === 'complete') {
+            l();
+          } else if (w.attachEvent) {
+            w.attachEvent('onload', l);
+          } else {
+            w.addEventListener('load', l, false);
+          }
+        }
+      })();
+    </script><!--  Twitter's widget.js  -->
   <script>
       $(window).on('load', function() {
         window.setTimeout(function() {
